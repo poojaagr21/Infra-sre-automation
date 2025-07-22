@@ -1,0 +1,35 @@
+# Local .terraform directories
+.terraform/
+
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Exclude override files as they are usually used to override resources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# .tfvars files often contain sensitive data, so ignore them
+*.tfvars
+*.tfvars.json
+
+# Ignore CLI and plan files
+*.tfplan
+
+# Ignore lock file (optional, if you don't want to share provider lock)
+.terraform.lock.hcl
+
+# Ignore filter, query, region files (if these are not meant to be in repo)
+--filters
+--query
+--region
+
+# MacOS & general system files
+.DS_Store
