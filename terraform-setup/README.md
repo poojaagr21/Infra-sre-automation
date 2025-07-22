@@ -1,7 +1,14 @@
-// START GENAI
-# Infra SRE Automation — Terraform EC2 Setup
 
-Welcome! This project shows how I automated the creation of an AWS EC2 instance using Terraform.  
+# PHASE 1 Plan the infrastructure— Terraform Setup
+
+Before anything runs we need to define the infra. 
+So i decided 
+1. Compute : EC2
+2. storage:S3
+4. Database:RDS
+5. Network:VPC
+
+ how I automated the creation of an AWS EC2 instance using Terraform.  
 Below you'll find the steps I took, shell commands I used, common issues I hit, and the solutions that worked for me.
 
 ---
