@@ -36,11 +36,9 @@ Used the AMI ID from the output in my Terraform configuration.
 Used a variable for ami_id in Terraform.
 Supplied the value via CLI or terraform.tfvars.
 4. Initialize and Plan Terraform
-# START GENAI
 terraform init
 terraform plan
 
-# END GENAI
 5. Dealt with Common Issues
 InvalidAMIID.NotFound
 Problem: AMI does not exist in the chosen region.
@@ -48,24 +46,18 @@ Solution: Ensured the AMI is from the same region as my provider block.
 Instance type not Free Tier eligible
 Problem: Instance type isn’t eligible for free tier.
 Solution: Used t3.micro (or another eligible type found with
-# START GENAI
 aws ec2 describe-instance-types --filters "Name=free-tier-eligible,Values=true" --region us-west-2 --query "InstanceTypes[*].InstanceType"
 
-# END GENAI
 ).
 Git push/pull errors (non-fast-forward, divergent branches, etc.)
 Problem: Couldn’t push due to branch conflicts.
 Solution: Used
-# START GENAI
 git pull --rebase origin main
 
-# END GENAI
 to synchronize histories, resolved any conflicts, then pushed.
 6. Apply Terraform Plan
-# START GENAI
 terraform apply
 
-# END GENAI
 Instance created successfully.
 Noted the output, such as the public IP address.
 7. Version Control with Git
@@ -73,7 +65,6 @@ Initialized the repo with git init.
 Added .gitignore to exclude state and sensitive files.
 Set up remote GitHub, handled branch renaming, and resolved push/pull issues.
 💡 Common Commands
-# START GENAI
 # Terraform
 terraform init
 terraform plan
@@ -89,7 +80,6 @@ git remote add origin https://github.com/poojaagr21/Infra-sre-automation
 git pull --rebase origin main
 git push -u origin main
 
-# END GENAI
 🛠️ Lessons Learned / Troubleshooting
 Always get your AMI ID in the same region you deploy to.
 Use Free Tier eligible instance types when testing.
